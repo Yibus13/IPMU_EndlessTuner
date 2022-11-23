@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    /*
     public void LoadGame(){
         SceneManager.LoadScene("SampleScene");
     }
@@ -19,5 +20,10 @@ public class MainMenu : MonoBehaviour
 
     public void LoadCredits(){
         SceneManager.LoadScene("Credits");
+    }
+    */
+    public void LoadScene(string name)
+    {
+        SceneManager.LoadScene(name);
     }
 }
