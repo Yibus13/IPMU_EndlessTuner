@@ -1,9 +1,10 @@
-
+using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    PlayerInputActions controls;
     public LayerMask groundMask;
     public float jumpForce = 400f;
     bool alive = true;
@@ -12,6 +13,11 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     float horizontalInput;
     public float horizontalMult = 2f;
+
+    void Awake()
+    {
+        controls = new PlayerInputActions();
+    }
 
     void FixedUpdate()
     {
@@ -34,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
+        if(Input.GetAxis("Vertical") > 0 && Input.GetAxis("Vertical") < 0.5 ){
+            Jump();
+        }
+
         if(transform.position.y < -5){
             Death();
         }
@@ -50,6 +60,9 @@ public class PlayerMovement : MonoBehaviour
         float height = GetComponent<Collider>().bounds.size.y;
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
 
-        rb.AddForce(Vector3.up * jumpForce);
+        if(isGrounded){
+            rb.AddForce(Vector3.up * jumpForce);
+        }
+        
     }
 }

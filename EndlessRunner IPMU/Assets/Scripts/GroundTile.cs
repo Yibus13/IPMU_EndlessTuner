@@ -26,14 +26,17 @@ public class GroundTile : MonoBehaviour
     public GameObject obstacle;
 
     public void spawnObstacle(){
-        int index = Random.Range(2,5);
-        Transform spawnPoint = transform.GetChild(index).transform;
-        Instantiate(obstacle, spawnPoint.position, Quaternion.identity, transform);
+        for(int i = 0; i < 2; i++) {
+            int index = Random.Range(2,5);
+            Transform spawnPoint = transform.GetChild(index).transform;
+            Instantiate(obstacle, spawnPoint.position, Quaternion.identity, transform);
+        }
+        
     }
     public GameObject pointPrefab;
 
     public void SpawnPoint(){
-        int amount = 10;
+        int amount = 3;
         for(int i = 0; i < amount; i++) {
             GameObject temp = Instantiate(pointPrefab, transform);
             temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
