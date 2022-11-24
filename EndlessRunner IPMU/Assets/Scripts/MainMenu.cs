@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    /*
+    
     public void LoadGame(){
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GameScene");
     }
-
+/*
     public void LoadTutorial(){
         SceneManager.LoadScene("Tutorial");
     }
