@@ -30,9 +30,28 @@ public class PlayerMovement : MonoBehaviour
         if(!alive){
             return;
         }
+
         Vector3 forwardMov = transform.forward * speed * Time.fixedDeltaTime;
+
+
+
+        if (rb.position.x <= -5 && horizontalInput < 0)
+        {
+            horizontalInput = 0;
+        }
+        else if (rb.position.x >= 5 && horizontalInput > 0)
+        {
+            horizontalInput = 0;
+        }
+
         Vector3 horizontalMov = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMult;
+
         rb.MovePosition(rb.position + forwardMov + horizontalMov);
+        //speed += acceleration;
+
+        //Vector3 forwardMov = transform.forward * speed * Time.fixedDeltaTime;
+        //Vector3 horizontalMov = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMult;
+        //rb.MovePosition(rb.position + forwardMov + horizontalMov);
         //speed += acceleration;
     }
 
@@ -42,7 +61,8 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
 
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
             Jump();
         }
 
@@ -54,6 +74,15 @@ public class PlayerMovement : MonoBehaviour
             Death();
         }
     }
+
+    public bool IsGrounded()
+    {
+        float height = GetComponent<Collider>().bounds.size.y;
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
+
+        return isGrounded;
+    }
+
     public void Death(){
         alive = false;
         Invoke("RestartGame", 2);
@@ -65,12 +94,12 @@ public class PlayerMovement : MonoBehaviour
         SceneManager.LoadScene("GameOver");
     }
     void Jump(){
-        float height = GetComponent<Collider>().bounds.size.y;
-        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
+        //float height = GetComponent<Collider>().bounds.size.y;
+        //bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
 
-        if(isGrounded){
+        //if(isGrounded){
             rb.AddForce(Vector3.up * jumpForce);
-        }
+        //}
         
     }
 }
