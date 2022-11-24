@@ -805,6 +805,7 @@ MonoBehaviour:
   acceleration: 0.2
   rb: {fileID: 2030368081}
   horizontalMult: 1.25
+  manager: {fileID: 0}
 --- !u!54 &2030368081
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class GroundTile : MonoBehaviour
     public GameObject obstacle;
 
     public void spawnObstacle(){
-        for(int i = 0; i < 2; i++) {
+        for(int i = 0; i < 3; i++) {
             int index = Random.Range(2,5);
             Transform spawnPoint = transform.GetChild(index).transform;
             Instantiate(obstacle, spawnPoint.position, Quaternion.identity, transform);
