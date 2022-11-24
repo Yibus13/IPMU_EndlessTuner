@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         inst = this;
+
     }
     void Start()
     {
@@ -31,4 +32,6 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    
 }
