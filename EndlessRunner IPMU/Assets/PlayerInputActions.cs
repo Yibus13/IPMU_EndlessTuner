@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-/*using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
@@ -80,4 +80,4 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     {
         return asset.FindBinding(bindingMask, out action);
     }
-}*/
+}

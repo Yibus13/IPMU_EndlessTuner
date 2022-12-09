@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
-        if(Input.GetAxis("Vertical") > 0 && Input.GetAxis("Vertical") < 0.5 ){
+        if(Input.GetAxis("Vertical") > 0 && Input.GetAxis("Vertical") < 0.45 ){
             Jump();
         }
 

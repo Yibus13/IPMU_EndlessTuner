@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -377,10 +377,10 @@ RectTransform:
   m_Father: {fileID: 1019311267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223, y: 94}
-  m_SizeDelta: {x: 32.8, y: 22.3}
+  m_AnchorMin: {x: 0.58875, y: 0.47555557}
+  m_AnchorMax: {x: 0.97250074, y: 0.93111116}
+  m_AnchoredPosition: {x: -1.5, y: 2.5}
+  m_SizeDelta: {x: -274.2, y: -182.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699877727
 MonoBehaviour:
@@ -649,10 +649,10 @@ RectTransform:
   m_Father: {fileID: 1019311267}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: -176}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.035, y: 0.082222216}
+  m_AnchorMax: {x: 0.22500001, y: 0.13777778}
+  m_AnchoredPosition: {x: 1, y: -0.5}
+  m_SizeDelta: {x: 8, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693701944
 MonoBehaviour:
@@ -808,8 +808,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5344654071c70c14eb8bd1acbb0f52af, type: 2}
+  m_sharedMaterial: {fileID: 3333646292993491280, guid: 5344654071c70c14eb8bd1acbb0f52af, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -916,10 +916,10 @@ RectTransform:
   m_Father: {fileID: 1019311267}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -50, y: -50}
+  m_AnchorMin: {x: 0.035, y: 0.36}
+  m_AnchorMax: {x: 0.72, y: 0.9466667}
+  m_AnchoredPosition: {x: 98, y: -69}
+  m_SizeDelta: {x: 202, y: 136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766768092
 MonoBehaviour:
@@ -944,8 +944,8 @@ MonoBehaviour:
   m_text: "Koral Games:\n\nAitor Lebrero Barroso\nJes\xFAs Culebras Gonz\xE1lez\nMariano
     Jes\xFAs de Biase\nLucas Andosilla Herraiz\nLuc\xEDa Beatriz Piqueras Garvi\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5344654071c70c14eb8bd1acbb0f52af, type: 2}
+  m_sharedMaterial: {fileID: 3333646292993491280, guid: 5344654071c70c14eb8bd1acbb0f52af, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -969,8 +969,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30.39
+  m_fontSizeBase: 30.39
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

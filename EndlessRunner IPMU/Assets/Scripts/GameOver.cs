@@ -19,10 +19,10 @@ public class GameOver : MonoBehaviour
         ranking.Sort();
         ranking.Reverse();
         foreach(int r in ranking){
-            rankingText.text += aux.ToString() + "º: " + r.ToString() + " \n";
+            rankingText.text += aux.ToString() + "ï¿½: " + r.ToString() + " \n";
             aux++;
         }
-        yourScoreText.text = "Tu puntuación: " + yourScore.ToString();
+        yourScoreText.text = "Your Score: " + yourScore.ToString();
     }
 
     // Update is called once per frame

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -228,7 +228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
@@ -373,10 +372,10 @@ RectTransform:
   m_Father: {fileID: 1663482013}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 79.099976, y: -46.700012}
-  m_SizeDelta: {x: 100, y: 25}
+  m_AnchorMin: {x: 0.042500004, y: 0.8644445}
+  m_AnchorMax: {x: 0.31500003, y: 0.92222226}
+  m_AnchoredPosition: {x: -63.900055, y: 1.2999878}
+  m_SizeDelta: {x: -118, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747361789
 MonoBehaviour:
@@ -400,8 +399,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5344654071c70c14eb8bd1acbb0f52af, type: 2}
+  m_sharedMaterial: {fileID: 3333646292993491280, guid: 5344654071c70c14eb8bd1acbb0f52af, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -788,7 +787,7 @@ GameObject:
   - component: {fileID: 2030368085}
   - component: {fileID: 2030368084}
   - component: {fileID: 2030368083}
-  - component: {fileID: 2030368082}
+  - component: {fileID: 2030368086}
   - component: {fileID: 2030368081}
   - component: {fileID: 2030368080}
   m_Layer: 0
@@ -835,20 +834,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!136 &2030368082
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030368079}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.97011703
-  m_Height: 1.7462106
-  m_Direction: 1
-  m_Center: {x: 0.13999993, y: 0, z: -0.29}
 --- !u!23 &2030368083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -915,6 +900,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2030368086
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030368079}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.84129894, y: 2, z: 1.8666172}
+  m_Center: {x: 0.021433102, y: 0, z: -0.075896256}
 --- !u!1 &2056109398
 GameObject:
   m_ObjectHideFlags: 0
