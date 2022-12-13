@@ -6,14 +6,15 @@ public class Score : MonoBehaviour
 {
     int score;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        this.transform.SetAsLastSibling();
         score = FindObjectOfType<GameManager>().score;
     }
     private void OnDestroy()
