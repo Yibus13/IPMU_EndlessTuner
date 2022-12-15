@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float acceleration = 0.05f;
     public Rigidbody rb;
     float horizontalInput;
-    public float horizontalMult = 2f;
+    public float horizontalMult = 1.5f;
     TextMeshProUGUI finalDistance;
     GameObject panel;
     [SerializeField] GameObject manager;
@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
-        if(Input.GetAxis("Vertical") > 0 && Input.GetAxis("Vertical") < 0.45 ){
+        if(Input.GetButton("Jump") && IsGrounded()){
             Jump();
         }
 
