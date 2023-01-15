@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         if(!alive){
             return;
         }
-
+        speed += 0.001f;
         Vector3 forwardMov = transform.forward * speed * Time.fixedDeltaTime;
 
 
@@ -98,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
         //bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
 
         //if(isGrounded){
+        if(rb.position.y>0&& rb.position.y<50)
             rb.AddForce(Vector3.up * jumpForce);
         //}
         

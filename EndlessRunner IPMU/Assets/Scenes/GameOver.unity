@@ -337,7 +337,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 1837181894}
-    m_SelectOnDown: {fileID: 1837181894}
+    m_SelectOnDown: {fileID: 1745961678}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -473,8 +473,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.99993896, y: -125.41501}
-  m_SizeDelta: {x: 160, y: 228.598}
+  m_AnchoredPosition: {x: -0.99993896, y: -134.47302}
+  m_SizeDelta: {x: 160, y: 210.481}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &292594046
 MonoBehaviour:
@@ -908,8 +908,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.40250003, y: 0.39628512}
   m_AnchorMax: {x: 0.6, y: 0.97564256}
-  m_AnchoredPosition: {x: -7.696995, y: -198.64954}
-  m_SizeDelta: {x: 103.39, y: 411.37}
+  m_AnchoredPosition: {x: -7.696995, y: -199.71}
+  m_SizeDelta: {x: 103.39, y: 409.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899723027
 MonoBehaviour:
@@ -989,8 +989,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000002861, y: 0.000010014}
-  m_SizeDelta: {x: 160, y: 228.6}
+  m_AnchoredPosition: {x: -0.000002861, y: -4.528503}
+  m_SizeDelta: {x: 160, y: 201.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1166955730
 MonoBehaviour:
@@ -1178,8 +1178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 70, y: 0.73407}
-  m_SizeDelta: {x: 20, y: 230.07}
+  m_AnchoredPosition: {x: 70, y: 4.0455017}
+  m_SizeDelta: {x: 20, y: 209.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1745961678
 MonoBehaviour:
@@ -1194,10 +1194,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 150466733}
+    m_SelectOnDown: {fileID: 1837181894}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -1224,12 +1224,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1880393676}
   m_HandleRect: {fileID: 1880393675}
   m_Direction: 2
-  m_Value: 0.99534494
-  m_Size: 0.4203666
+  m_Value: 0.9999881
+  m_Size: 0.38297576
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1729803012}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: bajar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1745961679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,7 +1314,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 150466733}
+    m_SelectOnUp: {fileID: 1745961678}
     m_SelectOnDown: {fileID: 150466733}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}

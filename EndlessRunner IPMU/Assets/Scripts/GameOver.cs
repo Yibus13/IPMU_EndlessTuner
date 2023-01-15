@@ -19,7 +19,7 @@ public class GameOver : MonoBehaviour
         ranking.Sort();
         ranking.Reverse();
         foreach(int r in ranking){
-            rankingText.text += aux.ToString() + "�: " + r.ToString() + " \n";
+            rankingText.text += aux.ToString() + "º: " + r.ToString() + " \n";
             aux++;
         }
         yourScoreText.text = "Your Score: " + yourScore.ToString();
@@ -30,4 +30,6 @@ public class GameOver : MonoBehaviour
     {
         
     }
+
+   
 }
