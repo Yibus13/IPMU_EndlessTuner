@@ -61,10 +61,10 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
 
-        if(Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        /*if(Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             Jump();
-        }
+        }*/
 
         if(Input.GetButton("Jump") && IsGrounded()){
             Jump();
