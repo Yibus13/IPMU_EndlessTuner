@@ -53,6 +53,10 @@ public class PlayerMovement : MonoBehaviour
         //Vector3 horizontalMov = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMult;
         //rb.MovePosition(rb.position + forwardMov + horizontalMov);
         //speed += acceleration;
+        if (Input.GetButton("Jump") && IsGrounded())
+        {
+            Jump();
+        }
     }
 
 
@@ -66,9 +70,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }*/
 
-        if(Input.GetButton("Jump") && IsGrounded()){
-            Jump();
-        }
+        
 
         if(transform.position.y < -5){
             Death();
@@ -79,7 +81,8 @@ public class PlayerMovement : MonoBehaviour
     {
         float height = GetComponent<Collider>().bounds.size.y;
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
-
+        if (rb.position.y > 1)
+            isGrounded = false;
         return isGrounded;
     }
 
@@ -97,10 +100,10 @@ public class PlayerMovement : MonoBehaviour
         //float height = GetComponent<Collider>().bounds.size.y;
         //bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
 
-        //if(isGrounded){
-        if(rb.position.y>0&& rb.position.y<50)
+        if(IsGrounded())
+        {
             rb.AddForce(Vector3.up * jumpForce);
-        //}
+        }
         
     }
 }
