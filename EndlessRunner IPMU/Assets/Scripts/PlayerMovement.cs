@@ -1,6 +1,6 @@
 using UnityEngine.InputSystem;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 using UnityEngine.UI;
 using TMPro;
 
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float horizontalMult = 1.5f;
     TextMeshProUGUI finalDistance;
     GameObject panel;
+    public MainMenu scenes;
     [SerializeField] GameObject manager;
 
     void Awake()
@@ -94,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
     void RestartGame(){
         //finalDistance.text = "Your Score:" + manager.score; 
         //panel.SetActive(true);
-        SceneManager.LoadScene("GameOver");
+        scenes.playScene("GameOver");
     }
     void Jump(){
         //float height = GetComponent<Collider>().bounds.size.y;
