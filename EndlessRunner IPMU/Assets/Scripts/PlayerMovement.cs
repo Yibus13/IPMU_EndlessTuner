@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     TextMeshProUGUI finalDistance;
     GameObject panel;
     public MainMenu scenes;
+    public AudioManager audio;
     [SerializeField] GameObject manager;
 
     void Awake()
@@ -56,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         //speed += acceleration;
         if (Input.GetButton("Jump") && IsGrounded())
         {
+            audio.Play("Jump");
             Jump();
         }
     }
@@ -100,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
     void Jump(){
         //float height = GetComponent<Collider>().bounds.size.y;
         //bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
-
+        
         if(IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce);
