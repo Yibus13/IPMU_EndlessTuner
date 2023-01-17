@@ -10,8 +10,10 @@ public class GameManager : MonoBehaviour
     public int score;
     public TextMeshProUGUI scoreText;
     public PlayerMovement playerMovement;
+    public AudioManager sound;
 
     public void AddScore(){
+        sound.Play("Coin");
         score++;
         scoreText.text = "Score: " + score;
         playerMovement.speed += playerMovement.acceleration;
