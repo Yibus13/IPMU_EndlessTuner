@@ -21,15 +21,18 @@ public class PlayerMovement : MonoBehaviour
     public AudioManager audio;
     [SerializeField] GameObject manager;
 
+
+
     void Awake()
     {
         controls = new PlayerInputActions();
-       
+
     }
 
     void FixedUpdate()
     {
-        if(!alive){
+        if (!alive)
+        {
             return;
         }
         speed += 0.001f;
@@ -73,11 +76,15 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }*/
 
-        
 
-        if(transform.position.y < -5){
+
+        if (transform.position.y < -5)
+        {
             Death();
         }
+
+
+
     }
 
     public bool IsGrounded()
@@ -89,24 +96,30 @@ public class PlayerMovement : MonoBehaviour
         return isGrounded;
     }
 
-    public void Death(){
+    public void Death()
+    {
         alive = false;
         Invoke("RestartGame", 2);
     }
 
-    void RestartGame(){
+    void RestartGame()
+    {
         //finalDistance.text = "Your Score:" + manager.score; 
         //panel.SetActive(true);
         scenes.playScene("GameOver");
     }
-    void Jump(){
+    void Jump()
+    {
         //float height = GetComponent<Collider>().bounds.size.y;
         //bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
-        
-        if(IsGrounded())
+
+        if (IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce);
         }
-        
+
     }
+
+
+
 }
